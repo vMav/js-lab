@@ -5,11 +5,9 @@ var score = 0
 var player = prompt('who dis?','')
 var counter = 0
 
-
-
 function setimg(){
     mapobj()
-    document.getElementById('playern').innerHTML = player
+    document.getElementById('playern').innerHTML = '~~~   ' + player + '   ~~~'
     var coverimage = 'cover.jpg';
     var img = document.getElementsByClassName("varimg");
 
@@ -48,6 +46,7 @@ function mapobj(){
 }
 
 function reset(){
+    counter++
     turn = 0
     selects.pop().src = 'cover.jpg'
     selects.pop().src = 'cover.jpg'
@@ -55,7 +54,6 @@ function reset(){
 
 function getclick(obj){
     turn++
-    counter++
     var current = obj
 
     current.src = mapping[obj.id]
@@ -85,7 +83,7 @@ function getclick(obj){
 function update(){
     var newScore = score / counter
     var newScore = newScore.toFixed(0)
-    document.getElementById('playern').innerHTML = player
+    document.getElementById('playern').innerHTML = '~~~   ' + player + '   ~~~'
     document.getElementById('score').innerHTML = newScore
     document.getElementById('turns').innerHTML = counter
 }
