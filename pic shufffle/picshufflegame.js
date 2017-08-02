@@ -1,4 +1,6 @@
 var mapping = {}
+var turn = 0
+var last = ""
 
 function setimg(){
     //set a default "cover" image to hide underlying image
@@ -36,13 +38,16 @@ var set2 = shuffle()
 for(x = 0; x <12; x++){
 var w1 = "i" + x;
 var w2 = "i" + (x + 12)
-mapping[w1] = set1[x]
-mapping[w2] = set2[x]
+mapping[w1] = set1[x]+'.jpg'
+mapping[w2] = set2[x]+'.jpg'
 }
 }
 
 function getclick(obj){
-    alert(obj.id)
+    turn++
+    obj.src = mapping[obj.id]
+    
+    last = mapping[obj.id]
 }
 
 
