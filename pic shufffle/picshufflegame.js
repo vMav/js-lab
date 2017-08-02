@@ -1,7 +1,7 @@
 var mapping = {}
 var turn = 0
-var recentselect = ''
-
+var selects = []
+var score = 0
 
 function setimg(){
     //set a default "cover" image to hide underlying image
@@ -46,21 +46,37 @@ mapping[w2] = set2[x]+'.jpg'
 
 function reset(){
     turn = 0
+    selects.pop().src = 'cover.jpg'
+    selects.pop().src = 'cover.jpg'
 }
 
 function getclick(obj){
     turn++
-   
+    var current = obj
 
-    if(turn === 3){
-        reset
-      
+    current.src = mapping[obj.id]
+    selects.push(current)
+
+   // alert(selects)
+
+    if(turn === 2){
+        if (selects[0].src == selects[1].src){
+            alert('You found a match!')
+            score += 100
+            selects = []
+            turn = 0
+            document.getElementsByTagName('h2')[0].innerHTML = score
+        }
+        else{
+        alert('Not a Match!')
+        reset()
+        }
+    
 
     }
 
     else{
-        obj.src = mapping[obj.id]
-       
+        
        
     }
     
