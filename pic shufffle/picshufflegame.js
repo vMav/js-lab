@@ -1,3 +1,5 @@
+var mapping = {}
+
 function setimg(){
     //set a default "cover" image to hide underlying image
     var coverimage = 'cover.jpg';
@@ -26,11 +28,26 @@ if(select != 'xx'){
 return output
 }
 
-//function mapobj(){
+function mapobj(){
+
 var set1 = shuffle()
 var set2 = shuffle()
-//}
 
+for(x = 0; x <12; x++){
+var w1 = "i" + x;
+var w2 = "i" + (x + 12)
+mapping[w1] = set1[x]
+mapping[w2] = set2[x]
+}
+}
+
+mapobj()
+var maptest = []
+for (var [key, value] of Object.entries(mapping)) {
+    maptest.push(key + ' ' + value);
+}
+
+console.log(maptest)
 function testy(){ //temp only
-document.getElementsByTagName('p')[0].innerHTML = "SET 1: " + set1+ " SET 2: " + set2
+document.getElementsByTagName('p')[0].innerHTML = " mapobj = " + maptest
 }
