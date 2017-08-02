@@ -1,6 +1,7 @@
 var mapping = {}
 var turn = 0
-var last = ""
+var recentselect = ''
+
 
 function setimg(){
     //set a default "cover" image to hide underlying image
@@ -43,12 +44,28 @@ mapping[w2] = set2[x]+'.jpg'
 }
 }
 
+function reset(){
+    turn = 0
+}
+
 function getclick(obj){
     turn++
-    obj.src = mapping[obj.id]
+   
+
+    if(turn === 3){
+        reset
+      
+
+    }
+
+    else{
+        obj.src = mapping[obj.id]
+       
+       
+    }
     
-    last = mapping[obj.id]
 }
+
 
 
 
