@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>Get your shuffle on</title>
+        <title>find the trees</title>
         <meta charset="utf-8">
         <script src="picshufflegame.js"></script>
         <style>
@@ -10,6 +10,10 @@
             div{
                 align-content: center;
                 text-align: center;
+                opacity: 60%;
+                position: relative; top: 150px;
+                position: absolute; left: 0px;
+                background-color: white
             }
             td{
                 text-align: center;
@@ -20,11 +24,26 @@
                 font-size: 120%;
                 font-weight: bold
             }
+            h1{
+                font-size: 300%;
+                opacity: 10%;
+                color: lightgreen;
+                page-break-after: avoid;
+            }
+            p{
+                color: green;
+                position: relative; top: -30px;
 
+            }
+            table {
+                position: relative; top: -140px;
+            }
         </style>
     </head>
-    <body onload="setimg()">
-        <div>
+    <body background='bkg.jpg' onload="setimg()">
+        <h1>find the trees</h1>
+        <p>you know you want to...</p>
+
             <table align ='center'>
                 <tr>
                     <td id='playern'rowspan></td>
@@ -39,7 +58,7 @@
                     <td rowspan><button onclick='resetButton()'>Start Over?</button></td>
                 </tr>
             </table>
-        </div>
+
         <div id="imgbank">
             <img class = "varimg" id = "i0" src = ""  onclick='getclick(this)' height = '150px' width = '150px' alt = ""> 
             <img class = "varimg" id = "i1" src = ""  onclick='getclick(this)' height = '150px' width = '150px'alt = "">
