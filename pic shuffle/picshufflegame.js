@@ -2,9 +2,14 @@ var mapping = {}
 var turn = 0
 var selects = []
 var score = 0
+var player = prompt('who dis?','')
+var counter = 0
+
+
 
 function setimg(){
     mapobj()
+    document.getElementById('playern').innerHTML = player
     var coverimage = 'cover.jpg';
     var img = document.getElementsByClassName("varimg");
 
@@ -50,6 +55,7 @@ function reset(){
 
 function getclick(obj){
     turn++
+    counter++
     var current = obj
 
     current.src = mapping[obj.id]
@@ -58,10 +64,9 @@ function getclick(obj){
     if(turn === 2){
         if (selects[0].src == selects[1].src && selects[0].id != selects[1].id){
             alert('You found a match!')
-            score += 10
+            score += 100
             selects = []
             turn = 0
-            document.getElementsByTagName('h2')[0].innerHTML = score
 
         }
         else{
@@ -69,12 +74,28 @@ function getclick(obj){
             reset()
         }
     }
-    
-    if (score >= 120){
+
+    if (score >= 1200){
         alert('Total Winner... have another go...')
+        resetButton()
+    }
+    update()
+}
+
+function update(){
+    var newScore = score / counter
+    var newScore = newScore.toFixed(0)
+    document.getElementById('playern').innerHTML = player
+    document.getElementById('score').innerHTML = newScore
+    document.getElementById('turns').innerHTML = counter
+}
+
+function resetButton(){
         score = 0
+        counter = 0
+        turn = 0
         selects = []
         setimg()
-        mapobj()   
-    }
+        update()
+        document.getElementById('score').innerHTML = 0
 }

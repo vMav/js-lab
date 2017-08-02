@@ -5,26 +5,41 @@
         <script src="picshufflegame.js"></script>
         <style>
             body{
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             }
             div{
-                align-content: center
+                align-content: center;
+                text-align: center;
+            }
+            td{
+                text-align: center;
             }
 
-            
-            h3{
-                text-align: center
-            }
-            h2{
-                text-align: center
-                
+            tr#scoreline{
+
+                font-size: 120%;
+                font-weight: bold
             }
 
         </style>
     </head>
     <body onload="setimg()">
-        <h3>Score</h3>
-        <h2>0</h2>
+        <div>
+            <table align ='center'>
+                <tr>
+                    <td id='playern'>Legend</td>
+                </tr>
+                <tr>
+                    <td>Turns:</td><td id='turns'>0</td>
+                </tr>
+                <tr id='scoreline'>
+                    <td>Score:</td><td id='score'>0</td>
+                </tr>
+                <tr>
+                    <td rowspan><button onclick='resetButton()'>Start Over?</button></td>
+                </tr>
+            </table>
+        </div>
         <div id="imgbank">
             <img class = "varimg" id = "i0" src = ""  onclick='getclick(this)' height = '150px' width = '150px' alt = ""> 
             <img class = "varimg" id = "i1" src = ""  onclick='getclick(this)' height = '150px' width = '150px'alt = "">
