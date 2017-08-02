@@ -4,50 +4,53 @@
         <meta charset="utf-8">
         <script src="picshufflegame.js"></script>
         <style>
+            body{
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+            }
             div{
                 align-content: center
             }
 
-            }
-            h1{
+            
+            h3{
                 text-align: center
             }
             h2{
                 text-align: center
+                
             }
 
         </style>
     </head>
     <body onload="setimg()">
+        <h3>Score</h3>
+        <h2>0</h2>
         <div id="imgbank">
-<img class = "varimg" id = "i0" src = ""  onclick='getclick(this)' height = '150px' width = '150px' alt = ""> 
-<img class = "varimg" id = "i1" src = ""  onclick='getclick(this)' height = '150px' width = '150px'alt = "">
-<img class = "varimg" id = "i2" src = ""  onclick='getclick(this)' height = '150px' width = '150px'alt = "">
-<img class = "varimg" id = "i3" src = ""  onclick='getclick(this)' height = '150px' width = '150px'alt = "">
-<img class = "varimg" id = "i4" src = ""  onclick='getclick(this)' height = '150px' width = '150px'alt = "">
-<img class = "varimg" id = "i5" src = ""  onclick='getclick(this)' height = '150px' width = '150px'alt = "">
-<img class = "varimg" id = "i6" src = ""  onclick='getclick(this)' height = '150px' width = '150px'alt = "">
-<img class = "varimg" id = "i7" src = ""  onclick='getclick(this)' height = '150px' width = '150px'alt = "">
-<img class = "varimg" id = "i8" src = ""  onclick='getclick(this)' height = '150px' width = '150px'alt = "">
-<img class = "varimg" id = "i9" src = ""  onclick='getclick(this)' height = '150px' width = '150px'alt = "">
-<img class = "varimg" id = "i10" src = "" onclick='getclick(this)' height = '150px' width = '150px' alt = "">
-<img class = "varimg" id = "i11" src = "" onclick='getclick(this)' height = '150px' width = '150px' alt = "">
-<img class = "varimg" id = "i12" src = "" onclick='getclick(this)' height = '150px' width = '150px' alt = "">
-<img class = "varimg" id = "i13" src = "" onclick='getclick(this)' height = '150px' width = '150px' alt = "">
-<img class = "varimg" id = "i14" src = "" onclick='getclick(this)' height = '150px' width = '150px' alt = "">
-<img class = "varimg" id = "i15" src = "" onclick='getclick(this)' height = '150px' width = '150px' alt = "">
-<img class = "varimg" id = "i16" src = "" onclick='getclick(this)' height = '150px' width = '150px' alt = "">
-<img class = "varimg" id = "i17" src = "" onclick='getclick(this)' height = '150px' width = '150px' alt = "">
-<img class = "varimg" id = "i18" src = "" onclick='getclick(this)' height = '150px' width = '150px' alt = "">
-<img class = "varimg" id = "i19" src = "" onclick='getclick(this)' height = '150px' width = '150px' alt = "">
-<img class = "varimg" id = "i20" src = "" onclick='getclick(this)' height = '150px' width = '150px' alt = "">
-<img class = "varimg" id = "i21" src = "" onclick='getclick(this)' height = '150px' width = '150px' alt = "">
-<img class = "varimg" id = "i22" src = "" onclick='getclick(this)' height = '150px' width = '150px' alt = "">
-<img class = "varimg" id = "i23" src = "" onclick='getclick(this)' height = '150px' width = '150px' alt = "">
+            <img class = "varimg" id = "i0" src = ""  onclick='getclick(this)' height = '150px' width = '150px' alt = ""> 
+            <img class = "varimg" id = "i1" src = ""  onclick='getclick(this)' height = '150px' width = '150px'alt = "">
+            <img class = "varimg" id = "i2" src = ""  onclick='getclick(this)' height = '150px' width = '150px'alt = "">
+            <img class = "varimg" id = "i3" src = ""  onclick='getclick(this)' height = '150px' width = '150px'alt = "">
+            <img class = "varimg" id = "i4" src = ""  onclick='getclick(this)' height = '150px' width = '150px'alt = "">
+            <img class = "varimg" id = "i5" src = ""  onclick='getclick(this)' height = '150px' width = '150px'alt = "">
+            <img class = "varimg" id = "i6" src = ""  onclick='getclick(this)' height = '150px' width = '150px'alt = "">
+            <img class = "varimg" id = "i7" src = ""  onclick='getclick(this)' height = '150px' width = '150px'alt = "">
+            <img class = "varimg" id = "i8" src = ""  onclick='getclick(this)' height = '150px' width = '150px'alt = "">
+            <img class = "varimg" id = "i9" src = ""  onclick='getclick(this)' height = '150px' width = '150px'alt = "">
+            <img class = "varimg" id = "i10" src = "" onclick='getclick(this)' height = '150px' width = '150px' alt = "">
+            <img class = "varimg" id = "i11" src = "" onclick='getclick(this)' height = '150px' width = '150px' alt = "">
+            <img class = "varimg" id = "i12" src = "" onclick='getclick(this)' height = '150px' width = '150px' alt = "">
+            <img class = "varimg" id = "i13" src = "" onclick='getclick(this)' height = '150px' width = '150px' alt = "">
+            <img class = "varimg" id = "i14" src = "" onclick='getclick(this)' height = '150px' width = '150px' alt = "">
+            <img class = "varimg" id = "i15" src = "" onclick='getclick(this)' height = '150px' width = '150px' alt = "">
+            <img class = "varimg" id = "i16" src = "" onclick='getclick(this)' height = '150px' width = '150px' alt = "">
+            <img class = "varimg" id = "i17" src = "" onclick='getclick(this)' height = '150px' width = '150px' alt = "">
+            <img class = "varimg" id = "i18" src = "" onclick='getclick(this)' height = '150px' width = '150px' alt = "">
+            <img class = "varimg" id = "i19" src = "" onclick='getclick(this)' height = '150px' width = '150px' alt = "">
+            <img class = "varimg" id = "i20" src = "" onclick='getclick(this)' height = '150px' width = '150px' alt = "">
+            <img class = "varimg" id = "i21" src = "" onclick='getclick(this)' height = '150px' width = '150px' alt = "">
+            <img class = "varimg" id = "i22" src = "" onclick='getclick(this)' height = '150px' width = '150px' alt = "">
+            <img class = "varimg" id = "i23" src = "" onclick='getclick(this)' height = '150px' width = '150px' alt = "">
 
         </div>          
-<h1>Score</h1>
-<h2>0</h2>
-
     </body>
 </html>

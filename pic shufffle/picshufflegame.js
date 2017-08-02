@@ -2,6 +2,8 @@ var mapping = {}
 var turn = 0
 var selects = []
 var score = 0
+//var player = prompt('yo, who is this?', '')
+
 
 function setimg(){
     //set a default "cover" image to hide underlying image
@@ -62,10 +64,11 @@ function getclick(obj){
     if(turn === 2){
         if (selects[0].src == selects[1].src){
             alert('You found a match!')
-            score += 100
+            score += 10
             selects = []
             turn = 0
             document.getElementsByTagName('h2')[0].innerHTML = score
+
         }
         else{
         alert('Not a Match!')
