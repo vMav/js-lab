@@ -13,19 +13,24 @@ function shuffle(){
 var range = [1,2,3,4,5,6,7,8,9,10,11,12];
 var output = [];
 
-while(output.length <= 12){
-var r = Math.random() * 11;
-var r = Math.round(r)
+while(output.length < 12){
+
+var r = Math.round(Math.random() * 11);
 var select = range[r]
 
 if(select != 'xx'){
     output.push(select)
-    select = 'xx'
+    range[r] = 'xx'
     }
 }
 return output
 }
 
+//function mapobj(){
+var set1 = shuffle()
+var set2 = shuffle()
+//}
+
 function testy(){ //temp only
-document.getElementsByTagName('p')[0].innerHTML = shuffle()
+document.getElementsByTagName('p')[0].innerHTML = "SET 1: " + set1+ " SET 2: " + set2
 }
