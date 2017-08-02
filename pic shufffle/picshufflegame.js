@@ -74,16 +74,20 @@ function getclick(obj){
         alert('Not a Match!')
         reset()
         }
-    
 
+  
     }
-
-    else{
-        
-       
-    }
+    if (score >= 120){
+    alert('Total Winner... have another go...')
+    score = 0
+    selects = []
+    setimg()
+    mapojg()
     
+    }
 }
+
+
 
 
 
