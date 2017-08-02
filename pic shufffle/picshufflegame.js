@@ -41,13 +41,21 @@ mapping[w2] = set2[x]
 }
 }
 
+function getclick(obj){
+    alert(obj.id)
+}
+
+
+
+// TEST AREA 
 mapobj()
 var maptest = []
 for (var [key, value] of Object.entries(mapping)) {
-    maptest.push(key + ' ' + value);
+    maptest.push(key + ' : ' + value);
 }
-
 console.log(maptest)
+
 function testy(){ //temp only
 document.getElementsByTagName('p')[0].innerHTML = " mapobj = " + maptest
 }
+//EOF
