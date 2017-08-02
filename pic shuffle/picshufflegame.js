@@ -82,7 +82,7 @@ function getclick(obj){
     score = 0
     selects = []
     setimg()
-    mapojg()
+    mapobj()
     
     }
 }
